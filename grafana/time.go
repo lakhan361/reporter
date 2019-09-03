@@ -60,10 +60,10 @@ func init() {
 
 func NewTimeRange(from, to string) TimeRange {
 	if from == "" {
-		from = "now-1h"
+		from = "now-1M%2FM"
 	}
 	if to == "" {
-		to = "now"
+		to = "now-1M%2FM"
 	}
 	return TimeRange{from, to}
 }
